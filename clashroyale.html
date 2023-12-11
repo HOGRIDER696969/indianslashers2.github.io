@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>INDIAN SLASHERS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #222;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(255, 255, 255)414;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        section a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+                <li><a href="https://docs.google.com/spreadsheets/d/1x9JV2STpnUCzrA4OOtB9r0gw1Z0IAsJKr14CrmBSv9A/edit#gid=515400600">REWARDS AND MEMBER INFORMATION</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h1>INDIAN SLASHERS CLAN WEBSITE</h1>
+            <p>Join our legendary clan and conquer the arena with your fellow warriors!</p>
+            <a href="#join">Join the Clan</a>
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+        
+        <section id="about">
+            <h2>About Our Clan</h2>
+            <p>Our Clash Royale Clan is more than just a gaming community; we're a family of skilled players united by our passion for competitive play and fun. Established in 2015, we've been on a journey of victories and camaraderie ever since.</p>
+            <p>What sets us apart is our commitment to creating an inclusive and welcoming environment. We provide a space where players of all skill levels can come together, share strategies, and enjoy the thrill of the arena.</p>
+            <p>Our clan is led by a dedicated team of leaders who are always striving to make the clan experience even better. We organize regular tournaments, events, and offer a platform for members to communicate, share their epic replays, and stay up to date with the latest Clash Royale strategies.</p>
+            <p>Join our clan today and become a part of a community that's not just about the game but also about the friendships, rivalries, and unforgettable moments we create together. Together, we will reach new heights of Clash Royale glory!</p>
+        </section>
+        
+        <section id="events">
+            <h2>Upcoming Events</h2>
+            <p>Click on an event poster to see more information and register for the tournament.</p>
+            <div class="event-posters">
+                <div class="event-poster" onclick="showEventInfo('Event 1', '2023-01-15', '2:00 PM', 'Tournament Password: abc123')">
+                    <img src="C:\Users\Yash Dalvi\Downloads\event1.jpg" alt="Event 1">
+                </div>
+                <div class="event-poster" onclick="showEventInfo('Event 2', '2023-01-22', '3:30 PM', 'Tournament Password: xyz456')">
+                    <img src="C:\Users\Yash Dalvi\Downloads\event2.jpg" alt="Event 2">
+                </div>
+                <!-- Add more event posters here -->
+            </div>
+            
+            <div id="event-info"></div>
+        </section>
+        <script language="javascript">
+            function showEventInfo(eventName, date, time, password) {
+    const eventInfo = document.getElementById('event-info');
+    eventInfo.innerHTML = `
+        <h3>${eventName}</h3>
+        <p>Date: ${date}</p>
+        <p>Time: ${time}</p>
+        <p>${password}</p>
+    `;
+}
+        </script>
+        <section id="forum">
+            <h2>Clan Forum</h2>
+            <p>Join our forum to discuss strategies, share your epic replays, and connect with fellow clan members. The clash never stops here!</p>
+        </section>
+        <section id="register">
+            <h2>Register for Clan Tournaments</h2>
+            <p>Join our upcoming tournaments and prove your skills in epic battles. Register now to participate.</p>
+            <form action="tournament_registration.php" method="POST">
+                <table class="registration-table">
+                    <tr>
+                        <td><label for="name">Your Name:</label></td>
+                        <td><input type="text" id="name" name="name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Email Address:</label></td>
+                        <td><input type="email" id="email" name="email" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="username">Clash Royale Username:</label></td>
+                        <td><input type="text" id="username" name="username" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="tournament">Select Tournament:</label></td>
+                        <td>
+                            <select id="tournament" name="tournament" required>
+                                <option value="tournament1">Tournament 1</option>
+                                <option value="tournament2">Tournament 2</option>
+                                <option value="tournament3">Tournament 3</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                <input type="submit" value="Register">
+            </form>
+        </section>
+        
+        
+    </main>
+    <footer>
+        <p>&copy; 2023 INDIAN SLASHERS. All rights reserved.</p>
+    </footer>
+</body>
+</html>
